@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%=farm.name%></title>
+  </head>
+  <body>
+    <h1><%=farm.name%></h1>
+    <ul>
+      <li>City: <a href="/farms?city=<%=farm.city%>"><%=farm.city%></a></li>
+      <li>email: <%=farm.email%></li>
+      <H2>Products:</H2>
+      <ul>
+        <%for (let product of farm.products) {%>
+        <li>
+          <a href="/products/<%=product.id%>"> <%=product.name;%> </a>
+        </li>
+
+        <%}%>
+      </ul>
+    </ul>
+    <form action="/farms/<%=farm.id%>?_method=DELETE" method="post">
+      <button>DELETE</button>
+    </form>
+
+    <footer>
+      <a href="/farms/<%=farm.id%>/edit"> Edit this farm </a>
+
+      <br />
+
+      <a href="/farms/<%=farm.id%>/products/new">Add a product</a><br />
+      <a href="/farms">All farms</a><br />
+      <a href="/products">All products</a>
+    </footer>
+  </body>
+</html>

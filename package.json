@@ -1,0 +1,20 @@
+{
+  "name": "farmStand",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Patrick Fanella <fanella.patrick@gmail.com> (github.com/PatrickFanella)",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.2",
+    "method-override": "^3.0.0",
+    "mongodb": "^4.2.2",
+    "mongoose": "^6.1.4",
+    "path": "^0.12.7"
+  }
+}

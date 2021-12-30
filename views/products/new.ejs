@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add a Product</title>
+  </head>
+  <body>
+    <h1>New Product for <%=farm.name%></h1>
+
+    <form action="/farms/<%=farm._id%>/products" method="post">
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name" placeholder="product name" required />
+      <label for="price">Price:</label>
+      <input type="number" name="price" id="price" placeholder="product price" required />
+      <label for="category" id="category">Category:</label>
+      <select name="category" id="category" required>
+        <option value="null"></option>
+        <option value="fruit">fruit</option>
+        <option value="dairy">dairy</option>
+        <option value="vegetable">vegetable</option>
+      </select>
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
